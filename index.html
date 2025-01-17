@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
+    <!-- Scripts and Stylesheets -->
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -12,8 +13,12 @@
     />
   </head>
   <body>
+    <!-- Main Container -->
     <div class="container">
+      <!-- App Title -->
       <h1 class="app-title">Atmos</h1>
+
+      <!-- Search Form -->
       <form id="weatherForm" class="search-form">
         <input
           type="text"
@@ -26,17 +31,21 @@
         </button>
       </form>
 
+      <!-- Loading Animation -->
       <div id="loader" class="loader hidden">
         <div class="spinner"></div>
         <p>Fetching weather data...</p>
       </div>
 
+      <!-- Weather Information Card -->
       <div id="weatherCard" class="weather-card hidden">
+        <!-- Location and Date -->
         <div class="location-date">
           <h2 id="location"></h2>
           <p id="date"></p>
         </div>
 
+        <!-- Main Weather Display -->
         <div class="weather-main">
           <div class="temperature">
             <h1 id="currentTemp"></h1>
@@ -48,6 +57,7 @@
           </div>
         </div>
 
+        <!-- Weather Details Grid -->
         <div class="weather-details">
           <div class="detail">
             <i class="fas fa-temperature-high"></i>
@@ -77,6 +87,7 @@
       </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
       <p>
         Copyright ©<span id="currentYear"></span> Bryan Chow Wei Qian
