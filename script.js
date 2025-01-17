@@ -93,3 +93,5 @@ document.getElementById("weatherForm").addEventListener("submit", function (e) {
     getWeatherData(location);
   }
 });
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
