@@ -1,5 +1,9 @@
 async function getWeatherData(location) {
   try {
+    // Show loader and hide weather card
+    document.getElementById("loader").classList.remove("hidden");
+    document.getElementById("weatherCard").classList.add("hidden");
+
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(
         location
@@ -11,6 +15,9 @@ async function getWeatherData(location) {
   } catch (error) {
     console.error("Error fetching weather data:", error);
     alert("Error fetching weather data. Please try again.");
+  } finally {
+    // Hide loader regardless of success or failure
+    document.getElementById("loader").classList.add("hidden");
   }
 }
 
